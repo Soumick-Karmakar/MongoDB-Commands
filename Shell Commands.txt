@@ -94,3 +94,15 @@
  db.<collection name>.find({age:{$gte: 30}})              $gte is the greater than equal to operator
 
  db.<collection name>.find({age:{$lte: 30}})              $lte is the less than equal to operator
+
+ <------------------------------------Aggregation Pipeline-------------------------------->
+
+{
+   $lookup:
+     {
+       from: <collection to join>,
+       localField: <field from the input documents>,
+       foreignField: <field from the documents of the "from" collection>,
+       as: <output array field>
+     }
+}                                                         $lookup operator included with the aggregation pipeline is the same as the left outer join
