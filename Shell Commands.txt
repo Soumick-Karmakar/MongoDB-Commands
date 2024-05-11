@@ -59,6 +59,8 @@
 
  db.<collection name>.findOne({name: 'Soumick'})          Will display the 1st match only
 
+ db.<collection name>.find().limit(n).skip(m)             Will display n documents skipping first m documents
+
 <--------------------------------Update a specific field----------------------------->
 
  db.<collection name>.update({name:'MSD'},
