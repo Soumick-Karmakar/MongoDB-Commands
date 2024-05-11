@@ -61,6 +61,8 @@
 
  db.<collection name>.find().limit(n).skip(m)             Will display n documents skipping first m documents
 
+ db.<collection name>.find( { numbers: { $elemMatch: { $gt: -10, $lt: 10 } } } )        To find array elements with multiple criteria
+
 <--------------------------------Update a specific field----------------------------->
 
  db.<collection name>.update({name:'MSD'},
