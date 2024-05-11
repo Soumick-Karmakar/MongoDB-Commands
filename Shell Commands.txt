@@ -75,6 +75,17 @@
     'age' : 30
  }, {upsert: true})                                       If it dosent find a match then a row will be added with the mentioned fields
 
+<--------------------------------Insert and Delete Operations----------------------------->
+
+db.collection.insert()                                    To insert a document
+db.collection.insertOne()                                 To insert a single document
+db.collection.insertMany()                                To insert more than one documents
+
+db.collection.remove({ title: "Technology" })             To delete a document that match this query
+db.collection.delete({ title: "Technology" })             This is also used to delete but this command comes with more control
+db.collection.deleteOne({ title: "Technology" })          This will delete the 1st match 
+db.collection.deleteMany({ title: "Technology" })         This will delete all match
+
 <------------------------------------MongoDB Operators-------------------------------->
 
  db.<collection name>.update({name:'MSD'},
